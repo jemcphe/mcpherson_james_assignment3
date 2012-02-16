@@ -1,4 +1,4 @@
-// JSON Object File
+// JSON Data File
 
 var json = {
 	"players" : [
