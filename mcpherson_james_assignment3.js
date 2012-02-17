@@ -14,10 +14,12 @@ var 	friendNames = ["Margherita", " Nick", " Mac", " or Justin."],
 		me = { 
 			name: "James",
 			favoriteTeam: "Oklahoma City Thunder.",
-			getGameInfo : function(object) {
+			/*********************Method: Mutator - Return Object************************/
+			setGameInfo : function(object) {
 				var headline = console.log( object.day + "'s game is between the " + object.homeTeam + " and the " + object.awayTeam + "!");
 				return headline;
 			},
+			/*********************Method: Accessor - Return Number***********************/
 			getVoiceLeft: function(volume) {
 				do {
 				var voiceRemaining = console.log("I can't help but get loud at a Thunder game. I have " + volume + " % of my voice left.");
@@ -25,24 +27,23 @@ var 	friendNames = ["Margherita", " Nick", " Mac", " or Justin."],
 				} while (volume > 20); 
 				return voiceRemaining;
 			},
-			getBelongings: function(array) {
-				
-			}
 		},
 		guest = {
 			name : "",
+			/*********************Method: Function - Return Array************************/
 			listGuestOptions : function (friendNames) {
 				console.log("Here are the friends I have to choose from: ");
 				var names = console.log("" + friendNames);
 				return names;
 			},
+			/*********************Method: Function - Return String***********************/
 			getGuestByName: function (name) {
 				myGuest = console.log("I have decided to take " + name + " to the Thunder game!");
 				return myGuest;
 			},
+			/*********************Method: Procedure - No Return*************************/
 			easilyInfluenced : function(team) {
-				var myFavTeam = console.log('"I think the ' + team + ' just became my favorite team!"');
-				return team;
+				console.log('"I think the ' + team + ' just became my favorite team!"');
 			}
 		};
 
@@ -53,7 +54,7 @@ var playerData = function (json) {
 		console.log("Player: " + player.name + ", Position: " + player.position + ", Number: " + player.number);
 	};
 };
-
+//Function - Return Boolean - Recieves Boolean Argument
 var getStarter = function(haveProgram) {
 	if(haveProgram === "yes") {
 		console.log("The starting players for the game tonight are: ");
@@ -62,7 +63,7 @@ var getStarter = function(haveProgram) {
 		var name = player.name;
 			if(player.starter == true) {
 				console.log("" + name);
-			} 
+			}
 		};
 		return name;
 	} else {
@@ -71,7 +72,7 @@ var getStarter = function(haveProgram) {
 	}
 };
 	
-me.getGameInfo(game1);
+me.setGameInfo(game1);
 guest.listGuestOptions(friendNames);
 guest.getGuestByName("Nick");
 console.log("My favorite team, by far, is the " + me.favoriteTeam);
